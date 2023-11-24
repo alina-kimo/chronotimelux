@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/detail.css">
+    <title>Люксовые часы</title>
+
+</head>
+
+<body>
+
+    <a href="./17_of_Chronotime_listings.html" class="home-link">
+        <img src="images/left.svg" alt="detail" class="home-icon">
+    </a>
+
+
+    <div class="fix">
+        <div class="text">
+            <div class="line1"><a href="./17_of_Chronotime_listings.html">luxury watches</a></div>
+        </div>
+    </div>
+
+    <section>
+        
+        <div class="container flex">
+            <div class="left">
+
+                <div class="carousel-container">
+                    <div class="main_image">
+                        <img src="images/w/w1.webp" class="slide">
+                    
+                </div>
+
+                <div class="block">
+                    <img class="prev-btn" src="images/left.svg" alt="Предыдущий" onclick="scrollSlide('prev')">
+                    <div class="option flex">
+                        <div class="carousel">
+                            <img src="images/w/w1/w1.webp" alt="Изображение часов" onclick="img('images/w/w1/w1.webp')">
+                        </div>
+                    </div>
+                    <img class="next-btn" src="images/right.svg" alt="Следующий" onclick="scrollSlide('next')">
+                </div>
+
+
+            </div>
+        </div>
+        <div class="right">
+            <h3>Watch name</h3>
+            <h7>Brand: ...</h7><br>
+            <h7>Listing code</h7><br>
+            <br><h7>Mini description</h7><br><br>
+            <h4>$ price</h4>
+            <h7>Бесплатная доставка</h7>
+            <h5>Информация о доставке и продавце.</h5>
+            <h7 style="color: rgb(0, 160, 0); font-weight: bold;">В наличии</h7><br>
+            <h7>Доставка в течении 0 дней</h7><br>
+            <h7>Профессиональный дилер</h7>
+            <br><br><p><a href="tel:+996772451111">+996 772451111</a></p>
+        </div>
+        </div>
+    </section>
+
+
+<div class="index">
+    <section>
+        <div class="container">
+
+            <div class="detail">
+                <p style="font-size: 18px; font-weight: bold; margin-left: 1%;">Характиристика</p>
+            </div>
+        </div>
+        <div class="container flex">
+            <div class="left">
+                <table>
+                    <tr>
+                        <th>Базовая информация</th>
+                    </tr>
+                    <tr>
+                        <td>Код листинга</td>
+                        <td>{{ detail.listing_code }}</td>
+                    </tr>
+                    <tr>
+                        <td>Бренд</td>
+                        <td>{{ detail.brand }}</td>
+                    </tr>
+                    <tr>
+                        <td>Модель</td>
+                        <td>{{ detail.model }}</td>
+                    </tr>
+                    <tr>
+                        <td>Номер ссылки</td>
+                        <td>{{ detail.reference_number }}</td>
+                    </tr>
+                    <tr>
+                        <td>Код продукта дилера</td>
+                        <td>{{ detail.dealer_product_code }}</td>
+                    </tr>
+                    <tr>
+                        <td>Механизм</td>
+                        <td>{{ detail.base_movement }}</td>
+                    </tr>
+                    <tr>
+                        <td>Материал</td>
+                        <td>{{ detail.base_case_material }}</td>
+                    </tr>
+                    <tr>
+                        <td>Год выпуска</td>
+                        <td>{{ detail.year }}</td>
+                    </tr>
+                    <tr>
+                        <td>Состояние</td>
+                        <td>{{ detail.condition }}</td>
+                    </tr>
+                    <tr>
+                        <td>Объем поставки</td>
+                        <td>{{ detail.scope_of_delivery }}</td>
+                    </tr>
+                    <tr>
+                        <td>Пол</td>
+                        <td>{{ detail.gender }}</td>
+                    </tr>
+                    <tr>
+                        <td>Местоположение</td>
+                        <td>{{ detail.location }}</td>
+                    </tr>
+                    <tr>
+                        <td>Цена в евро</td>
+                        <td>€ {{ eur_price }}</td>
+                    </tr>
+                    <tr>
+                        <td>Наличие</td>
+                        <td>{{ detail.availability }}</td>
+                    </tr>
+                    <!-- Добавьте остальные строки по аналогии -->
+                </table>
+
+
+                <table>
+                    <tr>
+                        <th>Калибр</th>
+                    </tr>
+                    <tr>
+                        <td>Механизм</td>
+                        <td>{{ detail.caliber_movement }}</td>
+                    </tr>
+                    <tr>
+                        <td>Резерв мощности</td>
+                        <td>{{ detail.power_reserve }}</td>
+                    </tr>
+                    <tr>
+                        <td>Количество драгоценных камней</td>
+                        <td>{{ detail.number_of_jewels }}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="right">
+                <table>
+                    <tr>
+                        <th>Кейс</th>
+                    </tr>
+                    <tr>
+                        <td>Материал корпуса</td>
+                        <td>{{ detail.case_material }}</td>
+                    </tr>
+                    <tr>
+                        <td>Диаметр корпуса</td>
+                        <td>{{ detail.case_diameter }} мм</td>
+                    </tr>
+                    <tr>
+                        <td>Водонепроницаемость</td>
+                        <td>{{ detail.water_resistance }}</td>
+                    </tr>
+                    <tr>
+                        <td>Материал безеля</td>
+                        <td>{{ detail.bezel_material }}</td>
+                    </tr>
+                    <tr>
+                        <td>Стекло</td>
+                        <td>{{ detail.crystal }}</td>
+                    </tr>
+                    <tr>
+                        <td>Циферблат</td>
+                        <td>{{ detail.dial }}</td>
+                    </tr>
+                    <tr>
+                        <td>Цифры на циферблате</td>
+                        <td>{{ detail.dial_numbers }}</td>
+                    </tr>
+                </table>
+
+                <table>
+                    <tr>
+                        <th>Браслет/Ремешок</th>
+                    </tr>
+                    <tr>
+                        <td>Цвет</td>
+                        <td>{{ detail.braclet_color }}</td>
+                    </tr>
+                    <tr>
+                        <td>Застежка</td>
+                        <td>{{ detail.clasp }}</td>
+                    </tr>
+                    <tr>
+                        <td>Материал застежки</td>
+                        <td>{{ detail.clasp_material }}</td>
+                    </tr>
+                </table>
+
+                <table>
+                    <tr>
+                        <th>Функции</th>
+                    </tr>
+                    <tr>
+                        <td>{{ detail.functions }}</td>
+                    </tr>
+                </table>
+
+                <table>
+                    <tr>
+                        <th>Другое</th>
+                    </tr>
+                    <tr>
+                        <td>{{ detail.other_details }}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+<footer class="footer">
+    <div class="footer-text">
+        <p>Luxury Watches</p>
+        <p><a href="tel:+996772451111">+996 772451111</a></p>
+    </div>
+    <div class="end">
+        <p>2023 LUXURY WATCHES</p>
+    </div>
+</footer>
+
+
+    <script>
+        function img(anything) {
+        document.querySelector('.slide').src = anything;
+        }
+
+        function change(change) {
+        const line = document.querySelector('.home');
+        line.style.background = change;
+        }
+        
+
+
+        let currentSlide = 0;
+    const totalSlides = document.querySelectorAll('.carousel img').length;
+
+    // Захватите элемент, который вы хотите использовать для свайпа
+    const carouselContainer = document.querySelector('.carousel-container');
+    let startX = null;
+
+    // Обработчик начала свайпа
+    carouselContainer.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+    });
+
+    // Обработчик завершения свайпа
+    carouselContainer.addEventListener('touchend', (e) => {
+        if (startX !== null) {
+            const endX = e.changedTouches[0].clientX;
+            const deltaX = endX - startX;
+
+            // Определите, был ли свайп влево или вправо
+            if (deltaX > 0) {
+                scrollSlide('prev'); // Пролистать влево
+            } else if (deltaX < 0) {
+                scrollSlide('next'); // Пролистать вправо
+            }
+
+            startX = null; // Сброс начальной позиции
+        }
+    });
+
+    function scrollSlide(direction) {
+        if (direction === 'prev') {
+            if (currentSlide > 0) {
+                currentSlide = (currentSlide - 2 + totalSlides) % totalSlides;
+                updateCarousel();
+            }
+        } else if (direction === 'next') {
+            if (currentSlide < totalSlides - 2) {
+                currentSlide = (currentSlide + 2) % totalSlides;
+                updateCarousel();
+            }
+        }
+    }
+
+    function updateCarousel() {
+        const carousel = document.querySelector('.carousel');
+        const translateX = -currentSlide * 20;
+        carousel.style.transform = `translateX(${translateX}%)`;
+    }
+    </script>
+
+    
+
+</body>
+</html>

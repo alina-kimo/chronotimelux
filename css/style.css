@@ -1,0 +1,917 @@
+html{
+    scroll-behavior: smooth;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Assistant', sans-serif;
+    background-color: #ffffff;
+}
+
+
+.filter-container {
+    display: flex;
+    justify-content: flex-end; /* Выравнивание элемента справа */
+    margin-right: 20px;
+    margin-top: 50px;
+}
+
+
+/* Стили для самой кнопки select */
+#brandFilter, #sortOrder {
+    /* Ваш стиль здесь, например: */
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #717171;
+    text-align: center;
+    margin-left: 40px;
+}
+
+@media (max-width: 450px){
+    #brandFilter, #sortOrder {
+        /* Ваш стиль здесь, например: */
+        padding: 8px;
+        background-color: #ffffff;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+        color: #717171;
+        text-align: center;
+        margin-left: 30px;
+    }
+}
+
+
+
+.line2{
+    font-family: 'Georgia', serif;
+}
+
+.data{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    max-width: max-content;
+    /* align-items: center; */
+    text-align: left;
+}
+
+.data p{
+    /* margin-right: 50px; */
+    font-family: 'Georgia', serif;
+    font-size: 30px;
+}
+
+.section p{
+    font-size: 20px;
+}
+.data span{
+    color: #dadada;
+    /* margin-left: 10px; */
+    font-size: 8px;
+}
+
+.phone-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 9999;
+    /* box-shadow: 0px 0px 4px 2px rgba(146, 146, 146, 0.2); */
+}
+
+.phone-icon a {
+    display: block;
+}
+
+.phone-icon img {
+    width: 55px;
+    height: auto;
+}
+
+.price{
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.watch-description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.hover-text {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 1px;
+    cursor: pointer;
+}
+
+.hover-text:hover {
+    border: 1px solid #b5b5b5;
+}
+
+
+.watch-p:hover .hover-text {
+    display: inline;
+}
+
+
+
+
+/* Сначала определяем стили для изображения и контейнера */
+.watch-img {
+    overflow: hidden; /* Обрезаем всё, что выходит за пределы контейнера */
+}
+
+.watch-img img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s
+}
+
+/* При наведении увеличиваем изображение */
+.watch-link:hover .watch-img img {
+    transform: scale(0.9);
+}
+
+
+/* Убираем стили для невидимых ссылок */
+a:link {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: inherit; /* Используем цвет по умолчанию для текста */
+}
+
+/* Убираем стили для посещенных ссылок */
+a:visited {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: inherit; /* Используем цвет по умолчанию для текста */
+}
+
+
+
+.index{
+    background-color: #ffffff;
+}
+
+header {
+    /* background-color: #DFDFDF; */
+    /* background-image: url('../images/logotip1.svg'); */
+    padding: 20px;
+    text-align: center;
+    top: 0;
+    left: 0;
+    height: 400px;
+    display: grid;
+    /* grid-template-columns: repeat(2, 1fr); */
+}
+
+.header {
+    position: relative;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Цвет и прозрачность фона */
+    z-index: -1;
+}
+
+/* Стили для видео */
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2; /* Помещаем видео под фон */
+}
+
+
+
+.text {
+    text-align: center;
+    width: 17%;
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+
+.text1 {
+    text-align: left;
+    /* margin: 0 auto; */
+    /* padding: 10px 0; */
+    /* text-transform: uppercase; */
+    margin-left: 10%;
+}
+
+.text1 p{
+    font-size: 20px;
+    color: #ffffff;
+}
+
+
+/* #CD7F32 */
+/* #333 */
+.text .line1 {
+    font-family: 'Georgia', serif;
+    font-size: 18px; /* Введите желаемый размер шрифта для первой строки */
+    color: #b66a1f;
+    letter-spacing: 4px;
+    margin-top: 26px;
+    /* margin-bottom: 18px; */
+    /* border: 1px solid #b66a1f; */
+    padding: 12px; /* Добавляем отступ вокруг текста, чтобы он не был прижат к границе */
+    text-align: center;
+    font-weight: bold;
+}
+  
+.fix {
+    font-family: "Assistant", sans-serif;
+    background-color: rgba(255, 255, 255, 0.4);
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+    /* height: 70px; */
+}
+
+.text1 .line2 {
+    margin-top: 200px;
+    font-size: 38px; /* Введите желаемый размер шрифта для второй строки */
+    color: #ffffff;
+    letter-spacing: 4px;
+}
+
+.text1 .line3 {
+    font-size: 20px; /* Введите желаемый размер шрифта для третьей строки */
+    color: #000000;
+    margin-bottom: 20px;
+    border: 1px solid #000000;
+}
+
+
+.watch-p{
+    text-align: center;
+}
+
+.index h3{
+    margin-top: 6%;
+    margin-left: 8%;
+
+}
+
+
+@media (min-width: 600px){
+    .fix {
+        height: 70px;
+    }
+
+    .text {
+        width: 20%;
+    }
+}
+/* Стили для больших экранов */
+@media (min-width: 768px) {
+    .watch-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 100px;
+        margin-top: 30px;
+        /* max-width: min-content; */
+        max-width: max-content;
+    }
+    
+    .watch-item {
+        background-color: white;
+        /* border: 0.5px solid #ddd; */
+        border-radius: 3px;
+        padding: 20px;
+        /* text-align: center; */
+        /* width: 15em; */
+        /* max-width: 790px; */
+    }
+
+    
+    
+    .watch-img{
+        text-align: center;
+        padding-bottom: 30px;
+
+    }
+
+    .watch-item p{
+        font-size: 16px;
+    }
+
+    .price {
+        margin-top: 25px;
+        font-size: 18px;
+    }
+}
+
+
+
+
+
+
+
+
+/* Стиль для контейнера с двумя колонками */
+.container {
+    display: flex;
+    justify-content: space-between; /* Равномерное распределение между колонками */
+    /* max-width: 1000px; Максимальная ширина контейнера */
+    margin: 0 auto; /* Центрирование на странице */
+    /* padding: 20px; Отступ от краев страницы */
+    margin-bottom: 100px;
+    background-color: #ffffff;
+    max-width: max-content;
+}
+
+/* Стиль для колонок с фотографиями */
+.column {
+    flex-basis: calc(50% - 1px); /* Ширина колонки (с учетом отступов) */
+    margin: 0 1px 1px 1px; /* Добавляем отступы между колонками и снизу */
+    position: relative; /* Добавляем относительное позиционирование для дочерних элементов */
+}
+
+/* Стиль для изображений */
+.column img {
+    max-width: 100%; /* Изображение не будет превышать ширину колонки */
+    height: auto; /* Сохраняем пропорции изображения */
+    object-fit: cover;
+}
+
+
+/* Стиль для контейнера с изображением и текстом */
+.image-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden; /* Обрезать изображение, чтобы не выходило за пределы блока */
+}
+
+.image-container img {
+    transition: transform 0.6s ease; /* Применяем анимацию к изображению */
+}
+
+.image-container:hover img {
+    transform: scale(1.2); /* Увеличение изображения при наведении */
+}
+
+.image-container:hover {
+    cursor: pointer; /* Добавляем указатель мыши при наведении */
+}
+
+/* Другие стили для .image-container, .caption1, .caption... */
+
+
+
+
+.image-container p{
+    color: #ffffff;
+}
+
+/* Стиль для текста на фотографии */
+.caption1 {
+    position: absolute;
+    bottom: 80px;
+    left: 50px;
+    color: #ffffff;
+    /* background-color: rgba(255, 255, 255, 0.7); */
+    padding: 5px;
+    margin: 0; /* Убираем отступы */
+}
+.caption {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    color: rgb(255, 255, 255);
+    /* background-color: rgba(255, 255, 255, 0.7); */
+    padding: 5px;
+    margin: 0; /* Убираем отступы */
+}
+
+
+
+
+
+
+
+
+
+
+.info-block {
+    width: 80%;
+    border-bottom: 1px solid #ccc;
+    margin: 0 auto; /* Отступы сверху и снизу 20px, слева и справа 0 */
+    padding: 5px; /* Внутренний отступ */
+}
+
+.info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    width: max-content;
+}
+
+.info-header p{
+    font-size: 18px;
+}
+
+
+.info-block {
+    position: relative;
+    margin-bottom: 50px;
+    /* Другие стили для блока .info-block */
+}
+
+.toggle-button {
+    background-color: transparent;
+    border: none;
+    /* width: 70px; */
+    height: 75px; /* Желаемая высота кнопки */
+    position: absolute;
+    right: 0; /* Кнопка будет прижата к правому краю блока */
+    top: 0; /* Кнопка будет прижата к верхнему краю блока */
+    cursor: pointer;
+}
+.toggle-button1 {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+.toggl {
+    background-color: transparent;
+    border: none;
+    /* width: 70px; */
+    height: 75px; /* Желаемая высота кнопки */
+    position: absolute;
+    left: 0;
+    top: 0; /* Кнопка будет прижата к верхнему краю блока */
+    cursor: pointer;
+}
+
+.info-content {
+    display: none;
+    padding: 0px;
+}
+
+
+
+.footer {
+    background-color: #DFDFDF;
+    color: #000000;
+    padding-top: 10px ;
+    padding-bottom: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 80px;
+
+    /* position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    z-index: -1; */
+}
+
+
+.footer-text p {
+
+    letter-spacing: 4px;
+    color: #000000;
+}
+
+
+.footer-text p:first-child {
+    font-size: 18px;
+    text-align: center;
+    color: #000000;
+}
+
+.footer-text p:last-child {
+    font-size: 18px;
+    text-align: center;
+}
+
+.end p{
+    font-size: 12px;
+    color: #000000;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1000px) {
+    .text {
+        width: 25%;
+    }
+}
+
+
+@media (max-width: 1000px) {
+    header{
+        height: 300px;
+        background-size: 200% auto;
+        background-position: right -450px top -80px;
+        /* background-origin: content-box; */
+    }
+
+    .text {
+        width: 30%;
+    }
+
+    .text1 .line2 {
+        margin-top: 130px;
+}
+
+    
+}
+@media (min-width: 481px) and (max-width: 890px) {
+    
+
+    header{
+        height: 300px;
+        background-size: 200% auto;
+        background-position: right -400px top -40px;
+        /* background-origin: content-box; */
+    }
+
+    .watch-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Изменяем на два столбца */
+        gap: 10px;
+        padding: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 100px;
+        margin-top: 30px;
+        max-width: max-content;
+    }
+
+    .watch-item {
+        background-color: white;
+        border-radius: 3px;
+        padding: 10px; /* Уменьшаем внутренний отступ */
+    }
+
+    .watch-img {
+        padding-bottom: 10px;
+        text-align: center;
+    }
+    
+    .watch-item p {
+        font-size: 16px;
+    } 
+
+    .container {
+        flex-direction: column; /* Переключаемся на одну колонку */
+        align-items: center; /* Выравниваем по центру */
+    }
+
+    .column {
+        flex-basis: 100%; /* Ширина колонки 100% при одной колонке */
+        margin: 0 1px 1px 1px; /* Добавляем отступы снизу */
+        position: relative; /* Добавляем относительное позиционирование для дочерних элементов */
+    }
+
+    .container {
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .column {
+        flex-basis: 100%;
+    }
+
+    .info-header {
+        flex-direction: row; /* Изменяем обратно на ряд */
+        justify-content: flex-start; /* Выравниваем элементы слева */
+        align-items: center;
+    }
+
+    .price{
+        margin-top: 25px;
+        font-size: 18px;
+    }
+
+    /* Стиль для текста на фотографии */
+    .caption1 {
+        bottom: 50px;
+        left: 20px;
+    }
+    .caption {
+        bottom: 30px;
+        left: 20px;
+        font-size: 14px;
+    }
+
+    .footer-text p:first-child {
+        font-size: 20px;
+        text-align: center;
+        color: #000000;
+    }
+
+    .footer-text p:last-child {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .text1 .line2 {
+        margin-top: 90px;
+        font-size: 32px;
+}
+
+.text {
+    width: 34%;
+}
+
+}
+
+
+@media (min-width: 600px) and (max-width: 800px) {
+    .text {
+        width: 42%;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+
+    .filter-container {
+        justify-content: center;
+    }
+  
+
+    header{
+        height: 300px;
+        background-size: 300% auto;
+        background-position: right -530px top -30px;
+        
+        /* background-origin: content-box; */
+    }
+
+
+
+    .index h3{
+        margin-top: 15%;
+    }
+
+    .text1{
+        margin-top: 100px;
+    }
+
+    .text .line1 {
+        font-size: 12px;
+        letter-spacing: 4px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        padding: 10px; /* Добавляем отступ вокруг текста, чтобы он не был прижат к границе */
+        text-align: center; /* Выравниваем текст по центру внутри элемента */
+        font-weight: bold;
+    }
+
+    .text1 .line2 {
+        margin-top: 30px;
+        font-size: 24px; /* Введите желаемый размер шрифта для второй строки */
+
+        letter-spacing: 4px;
+    }
+    
+    .text1 .line3 {
+        font-size: 14px; /* Введите желаемый размер шрифта для третьей строки */
+        color: #000000;
+        margin-bottom: 20px;
+    }
+
+    .text1 p{
+        font-size: 16px;
+    }
+
+    .info-header {
+        flex-direction: row; /* Изменяем обратно на ряд */
+        justify-content: flex-start; /* Выравниваем элементы слева */
+        align-items: center;
+    }
+
+    .watch-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Изменяем на два столбца */
+        gap: 10px;
+        padding: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 50px;
+        margin-top: 25px;
+        max-width: max-content;
+    }
+
+    .watch-item {
+        background-color: white;
+        padding: 10px; /* Уменьшаем внутренний отступ */
+    }
+
+    .watch-img {
+        padding-bottom: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+    
+    .watch-item p {
+        font-size: 16px;
+        /* margin-left: 5px; */
+    } 
+
+    .price{
+        margin-top: 25px;
+        font-size: 18px;
+    }
+    
+    .watch-item img {
+        max-width: 80%;
+        height: auto;
+    }
+
+    .container {
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .column {
+        flex-basis: 100%;
+    }
+
+    .info-header {
+        flex-direction: row; /* Изменяем обратно на ряд */
+        justify-content: flex-start; /* Выравниваем элементы слева */
+        align-items: center;
+    }
+
+    .footer-text p {
+        letter-spacing: 4px;
+        color: #000000;
+    }
+    
+    .end p{
+        font-size: 12px;
+        color: #000000;
+        margin-top: 100px;
+        margin-bottom: 20px;
+    }
+
+
+    /* Стиль для текста на фотографии */
+    .caption1 {
+        bottom: 50px;
+        left: 20px;
+    }
+    .caption {
+        bottom: 30px;
+        left: 20px;
+        font-size: 14px;
+    }
+
+    .info-header p {
+        font-size: 20px;
+    }
+
+
+    /* styles.css */
+
+    .footer-text p:first-child {
+        font-size: 14px;
+        text-align: center;
+        color: #000000;
+    }
+
+    .footer-text p:last-child {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .text {
+        text-align: center;
+        width: 50%;
+        text-transform: uppercase;
+        margin: 0 auto;
+    }
+}
+
+
+@media only screen and (max-width: 445px) {
+
+    .text {
+        text-align: center;
+        width: 50%;
+        text-transform: uppercase;
+        margin: 0 auto;
+    }
+
+    .text1 p{
+        font-size: 18px;
+    }
+
+    .info-header p {
+        font-size: 16px;
+    }
+    .toggle-button{
+        height: 64px;
+    }
+    .watch-item p{
+        font-size: 14px;
+    }
+    .index h3{
+        font-size: 14px;
+    }
+
+    header{
+        height: 300px;
+        background-size: 250% auto;
+        background-position: right -310px top 90px;
+        /* background-origin: content-box; */
+    }
+
+    
+}
+
+
+@media (max-width: 400px) {
+
+    .text {
+        text-align: center;
+        width: 58%;
+        text-transform: uppercase;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 300px) {
+
+    header{
+        height: 300px;
+        background-size: 400% auto;
+        background-position: right -400px top -170px;
+        /* background-origin: content-box; */
+    }
+
+    .text {
+        text-align: center;
+        width: 60%;
+        text-transform: uppercase;
+        margin: 0 auto;
+    }
+
+    .text1 {
+        margin-top: 100px;
+    }
+
+    .text1 .line2 {
+        font-size: 20px;}
+
+    .info-header p {
+            font-size: 12px;
+        }
+
+    .toggle-button {
+            background-color: transparent;
+            border: none;
+            width: 30px;
+            height: 55px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            cursor: pointer;
+    }
+    
+}
+
+
+

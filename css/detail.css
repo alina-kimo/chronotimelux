@@ -1,0 +1,718 @@
+
+
+/* DETAIL INFO */
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  /* body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Baskervville', serif;
+    background-color: #ffffff;
+} */
+
+  body {
+    font-family: "Assistant", sans-serif;
+    background: #ffffff;
+  }
+
+
+
+
+  
+/* Стили для кнопки "Главная" */
+.home-link {
+    position: absolute; /* Позиционируем абсолютно в верхнем левом углу */
+    top: 25px;
+    left: 40px; /* Отступ слева */
+}
+
+/* Стили для изображения кнопки "Главная" */
+.home-icon {
+    width: 14px; /* Задаем размер изображения */
+    height: auto; /* Поддерживаем соотношение сторон */
+}
+
+
+
+  /* Убираем стили для невидимых ссылок */
+a:link {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: inherit; /* Используем цвет по умолчанию для текста */
+}
+
+/* Убираем стили для посещенных ссылок */
+a:visited {
+    text-decoration: none; /* Убираем подчеркивание */
+    color: inherit; /* Используем цвет по умолчанию для текста */
+}
+
+
+
+
+
+
+
+  .fix {
+    font-family: "Assistant", sans-serif;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+.text{
+  text-align: center;
+  width: 17%;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
+
+/* #CD7F32 */
+/* #333 */
+.text .line1 {
+  font-family: 'Georgia', serif;
+  font-size: 18px; /* Введите желаемый размер шрифта для первой строки */
+  color: #b66a1f;
+  letter-spacing: 4px;
+  margin-top: 26px;
+  /* margin-bottom: 18px; */
+  /* border: 1px solid #b66a1f; */
+  padding: 12px; /* Добавляем отступ вокруг текста, чтобы он не был прижат к границе */
+  text-align: center; /* Выравниваем текст по центру внутри элемента */
+  font-weight: bold;
+}
+  
+  .container {
+    max-width: 90%;
+    margin: auto;
+    /* height: 100vh; */
+    max-height: max-content;
+    margin-top: 5%;
+    background: white;
+    /* box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.3); */
+  }
+  
+  .left {
+    width: 50%;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .right {
+    width: 50%;
+    padding: 30px;
+
+  }
+  
+  .main_image img{
+    text-align: center;
+    width: 100%;
+    height: auto;
+  }
+  
+  /* .right {
+    padding: 50px 100px 50px 50px;
+  } */
+  
+  h3 {
+    color: #000000;
+    margin: 20px 0 20px 0;
+    font-size: 25px;
+  }
+
+  h4 {
+      color: rgb(0, 0, 0);
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    
+h5{
+    color: #000000;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    }
+    
+h7{
+    margin: 20px 0 20px 0;
+    font-size: 16px;
+}
+  
+p {
+    margin: 20px 0 0px 0;
+    line-height: 25px;
+  }
+  
+h5 {
+    font-size: 15px;
+  }
+  
+
+  
+  .carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+
+
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    text-align: center;
+  }
+
+  /* Стиль для изображения на полный экран */
+  .fullscreen-img {
+    max-width: 90%;
+    max-height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: auto;
+    height: auto;
+  }
+
+  /* Стиль для кнопки "Закрыть" */
+  .close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    cursor: pointer;
+  }
+
+
+
+
+
+
+
+  
+  .flex {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+
+.block{
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center; /* Выравнивание по центру по вертикали */
+  justify-items: center; /* Выравнивание по центру по горизонтали */
+}
+
+
+
+
+
+  .option img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    opacity: 0.1;
+}
+
+.option img:hover {
+    opacity: 1;
+    transform: scale(0.8);
+}
+
+/* Стили для контейнера карусели и кнопок */
+.option {
+    display: flex;
+    align-items: center; /* Центрирование по вертикали */
+    overflow: hidden;
+    justify-content: center;
+    text-align: center;
+    width: 300px;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.3s;
+    align-items: center; /* Центрирование по вертикали */
+}
+
+.carousel img {
+    width: 20%; /* Желаемая ширина изображений */
+    height: auto;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Кнопки для листания слайдов */
+.prev-btn,
+.next-btn {
+    cursor: pointer;
+    padding: 5px;
+    user-select: none;
+    width: 20px;
+}
+
+
+  @media only screen and (max-width:768px) {
+    .container{
+      max-width: 90%;
+      margin: auto;
+      height: auto;
+      margin-top: 5%;
+    }
+    
+  
+    .left, .right {
+      width: 100%;
+    }
+  
+    .container{
+      flex-direction: column;
+    }
+    .option{
+      width: 400px;
+    }
+  }
+  
+  @media only screen and (max-width:511px) {
+
+
+    .container{
+      max-width: 100%;
+      height: auto;
+      padding: 10px;
+      margin-top: 5%;
+    }
+
+    .left, .right {
+      padding: 20px;
+    }
+  
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  
+    /* Кнопки для листания слайдов */
+.prev-btn,
+.next-btn {
+    cursor: pointer;
+    padding: 5px;
+    user-select: none;
+    width: 20px;
+}
+
+.option{
+  width:350px;
+}
+    
+
+  }
+
+  
+  .flex1 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+  }
+
+  .detail{
+    padding-left: 30px;
+  }
+
+
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+th{
+    text-align: left;
+    padding: 10px;
+    /* border-bottom: 1px solid #ccc; */
+    font-size: 16px;
+}
+td {
+    text-align: left;
+    padding: 10px;
+    /* border-bottom: 0.1px solid #e8e8e8; */
+    font-size: 16px;
+}
+
+th {
+    background-color: #ffffff;
+    font-size: 18px;
+}
+
+
+
+
+
+.footer {
+  background-color: #DFDFDF;
+  color: #000000;
+  padding-top: 10px ;
+  padding-bottom: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 80px;
+
+  /* position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  z-index: -1; */
+}
+
+
+.footer-text p {
+
+  letter-spacing: 4px;
+  color: #000000;
+}
+
+
+.footer-text p:first-child {
+  font-size: 18px;
+  text-align: center;
+  color: #000000;
+}
+
+.footer-text p:last-child {
+  font-size: 18px;
+  text-align: center;
+}
+
+.end p{
+  font-size: 12px;
+  color: #000000;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+
+@media (min-width: 481px) and (max-width: 890px) {
+  .footer-text p:first-child {
+    font-size: 20px;
+    text-align: center;
+    color: #000000;
+}
+
+.footer-text p:last-child {
+    font-size: 18px;
+    text-align: center;
+}
+
+/* Кнопки для листания слайдов */
+.prev-btn,
+.next-btn {
+    cursor: pointer;
+    padding: 5px;
+    user-select: none;
+    width: 20px;
+}
+
+.option{
+  width: 280px;
+}
+}
+
+
+
+
+
+@media (max-width: 600px) {
+
+  .footer-text p {
+      letter-spacing: 4px;
+      color: #000000;
+  }
+  
+  .end p{
+      font-size: 12px;
+      color: #000000;
+      margin-top: 100px;
+      margin-bottom: 20px;
+  }
+
+  .footer-text p:first-child {
+      font-size: 14px;
+      text-align: center;
+      color: #000000;
+  }
+
+  .footer-text p:last-child {
+      font-size: 14px;
+      text-align: center;
+  }
+
+  /* Кнопки для листания слайдов */
+.prev-btn,
+.next-btn {
+    cursor: pointer;
+    padding: 5px;
+    user-select: none;
+    width: 20px;
+}
+
+}
+
+
+
+
+
+@media (max-width: 445px) {
+  .option{
+    width: 200px;
+}
+
+
+th{
+  text-align: left;
+  padding: 10px;
+  /* border-bottom: 1px solid #ccc; */
+  font-size: 16px;
+}
+td {
+  text-align: left;
+  padding: 10px;
+  /* border-bottom: 0.1px solid #e8e8e8; */
+  font-size: 14px;
+}
+
+th {
+  background-color: #ffffff;
+  font-size: 16px;
+}
+
+.left, .right {
+  padding: 14px;
+
+}
+}
+
+@media (max-width: 300px) {
+  .option {
+      width: 180px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.text {
+  text-align: center;
+  width: 17%;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
+
+.fix {
+  font-family: "Assistant", sans-serif;
+  background-color: rgba(255, 255, 255, 0.4);
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
+  /* height: 70px; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.text {
+  text-align: center;
+  width: 17%;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+
+.text .line1 {
+  font-size: 18px; /* Введите желаемый размер шрифта для первой строки */
+  letter-spacing: 4px;
+  margin-top: 26px;
+  /* margin-bottom: 18px; */
+  padding: 12px; /* Добавляем отступ вокруг текста, чтобы он не был прижат к границе */
+  text-align: center; /* Выравниваем текст по центру внутри элемента */
+  font-weight: bold;
+}
+
+
+
+@media (min-width: 600px){
+  .fix {
+      height: 70px;
+  }
+
+  .text {
+      width: 20%;
+  }
+}
+
+
+
+
+
+@media (min-width: 1000px) {
+  .text {
+      width: 25%;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .text {
+      width: 30%;
+  }
+
+  
+}
+@media (min-width: 481px) and (max-width: 890px) {
+
+.text {
+  width: 34%;
+}
+
+}
+
+
+@media (min-width: 600px) and (max-width: 800px) {
+  .text {
+      width: 42%;
+  }
+}
+
+
+@media (max-width: 400px) {
+
+  .text {
+      text-align: center;
+      width: 58%;
+      text-transform: uppercase;
+      margin: 0 auto;
+  }
+}
+
+
+
+@media (max-width: 600px) {
+
+  .text .line1 {
+      font-size: 12px; /* Введите желаемый размер шрифта для первой строки */
+      letter-spacing: 4px;
+      margin-top: 20px;
+      margin-bottom: 15px;
+      padding: 10px; /* Добавляем отступ вокруг текста, чтобы он не был прижат к границе */
+      text-align: center; /* Выравниваем текст по центру внутри элемента */
+      font-weight: bold;
+  }
+
+  .info-header {
+      flex-direction: row; /* Изменяем обратно на ряд */
+      justify-content: flex-start; /* Выравниваем элементы слева */
+      align-items: center;
+  }
+
+  .text {
+      text-align: center;
+      width: 40%;
+      text-transform: uppercase;
+      margin: 0 auto;
+  }
+}
+
+
+@media only screen and (max-width: 445px) {
+
+  .text {
+      text-align: center;
+      width: 50%;
+      text-transform: uppercase;
+      margin: 0 auto;
+  }
+}
+
+
+@media (max-width: 300px) {
+  .text {
+      text-align: center;
+      width: 47%;
+      text-transform: uppercase;
+      margin: 0 auto;
+  }}
